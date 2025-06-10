@@ -237,7 +237,7 @@ const RSVPForm = () => {
         <Paper
           elevation={3}
           sx={{
-            p: 4,
+            p: { xs: 2, sm: 4 },
             maxWidth: '800px',
             width: '100%',
             mx: 2,
@@ -246,12 +246,12 @@ const RSVPForm = () => {
             borderRadius: '20px'
           }}
         >
-          <Typography variant="h4" gutterBottom align="center" sx={{ color: '#FFB6C1', mb: 4 }}>
+          <Typography variant="h4" gutterBottom align="center" sx={{ color: '#FFB6C1', mb: 4, fontSize: { xs: '1.75rem', sm: '2.125rem' } }}>
             RSVP
           </Typography>
 
           <form onSubmit={handleSubmit}>
-            <Grid container spacing={3}>
+            <Grid container spacing={{ xs: 2, sm: 3 }}>
               <Grid item xs={12}>
                 <FormControl component="fieldset">
                   <FormLabel component="legend" sx={{ color: '#666' }}>Will you attend?</FormLabel>

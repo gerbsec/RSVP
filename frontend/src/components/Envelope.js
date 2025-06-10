@@ -99,8 +99,10 @@ const Envelope = () => {
       >
         <Box
           sx={{
-            width: '800px',
-            height: '500px',
+            // Responsive sizing – scales down smoothly on phones
+            width: { xs: '80vw', sm: '700px', md: '800px' },
+            // Maintain original 1.6 aspect-ratio instead of hard-coding height
+            aspectRatio: '16 / 10',
             position: 'relative',
             background: 'url(/images/envelope.png) no-repeat center/contain',
             transformOrigin: 'center',
@@ -114,7 +116,7 @@ const Envelope = () => {
           variant="h2"
           sx={{
             position: 'absolute',
-            top: '85%',
+            top: { xs: '90%', sm: '85%' },
             left: '50%',
             transform: 'translate(-50%, -50%)',
             color: 'white',
@@ -122,7 +124,8 @@ const Envelope = () => {
             fontWeight: 'bold',
             textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
             width: '100%',
-            textAlign: 'center'
+            textAlign: 'center',
+            fontSize: { xs: '1.8rem', sm: '2.5rem', md: '3rem' }
           }}
         >
           Diala & Ghadir
@@ -148,7 +151,7 @@ const Envelope = () => {
               component="img"
               src="/rsvp.jpg"
               sx={{
-                height: '750px',
+                height: { xs: '60vh', sm: '75vh', md: '750px' },
                 width: 'auto',
                 borderRadius: '20px',
                 boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
@@ -161,12 +164,12 @@ const Envelope = () => {
               onClick={() => navigate('/rsvp')}
               sx={{
                 position: 'absolute',
-                bottom: '-60px',
+                bottom: { xs: '-50px', sm: '-60px' },
                 left: '50%',
                 transform: 'translateX(-50%)',
-                px: 4,
-                py: 1.5,
-                fontSize: '1.2rem',
+                px: { xs: 3, sm: 4 },
+                py: { xs: 1, sm: 1.5 },
+                fontSize: { xs: '1rem', sm: '1.2rem' },
                 borderRadius: '30px',
                 background: 'linear-gradient(45deg, #FFB6C1 30%, #FFC0CB 90%)',
                 '&:hover': {

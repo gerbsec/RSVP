@@ -235,7 +235,7 @@ const AdminDashboard = () => {
           </Grid>
         </Grid>
 
-        <TableContainer component={Paper} sx={{ borderRadius: '15px' }}>
+        <TableContainer component={Paper} sx={{ borderRadius: '15px', overflowX: 'auto' }}>
           <Table>
             <TableHead>
               <TableRow>
